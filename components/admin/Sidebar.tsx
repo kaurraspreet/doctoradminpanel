@@ -1,5 +1,6 @@
 import React from 'react'
 import SvgIcon from '../SvgIcon'
+import Link from 'next/link'
 
 const Sidebar = () => {
   type RoutesList = {
@@ -64,7 +65,7 @@ const Sidebar = () => {
           <div className='flex flex-col space-y-1 font-medium'>
             
               {mainRoutes.map(({ name, href, icon }) => (
-                <a
+                <Link
                   href={href}
                   className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
                 >
@@ -73,14 +74,14 @@ const Sidebar = () => {
                     className='flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-white'
                   /> */}
                   <span className='ms-3'>{name}</span>
-                </a>
+                </Link>
               ))}
           
           </div>
           <div className='pt-4 mt-4 space-y-1 font-medium border-t border-gray-200 dark:border-gray-700 flex flex-col'>
            
               {otherRoutes.map(({ name, href, icon }) => (
-                <a
+                <Link
                   href={href}
                   className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
                 >
@@ -89,7 +90,7 @@ const Sidebar = () => {
                     className='flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-white'
                   /> */}
                   <span className='ms-3'>{name}</span>
-                </a>
+                </Link>
               ))}
            
           </div>
