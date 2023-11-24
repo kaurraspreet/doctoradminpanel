@@ -1,17 +1,14 @@
-// components/Sidebar.tsx
 import React from 'react'
-import Link from 'next/link'
-// import { Logout, Users } from '../SvgIcon'
 import SvgIcon from '../SvgIcon'
 
 const Sidebar = () => {
-  // type RoutesList = {
-  //   name: string
-  //   href: string
-  //   id: string
-  //   icon: string
-  // }
-  const mainRoutes = [
+  type RoutesList = {
+    name: string
+    href: string
+    id: string
+    icon: string
+  }
+  const mainRoutes: RoutesList[] = [
     {
       name: 'Dashboard',
       href: '/',
@@ -38,7 +35,7 @@ const Sidebar = () => {
     }
   ]
 
-  const otherRoutes = [
+  const otherRoutes: RoutesList[] = [
     {
       name: 'Blogs',
       href: '/blogs',
