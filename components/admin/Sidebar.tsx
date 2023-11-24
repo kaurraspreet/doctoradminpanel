@@ -71,11 +71,11 @@ const Sidebar = () => {
       >
         <div className='h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800'>
           <ul className='space-y-2 font-medium'>
-            <li>
-              {mainRoutes.map(({ name, href, id, icon }) => (
+            =
+            {mainRoutes.map(({ name, href, id, icon }) => (
+              <li key={id}>
                 <a
                   href={href}
-                  id={id}
                   className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
                 >
                   <SvgIcon
@@ -84,15 +84,14 @@ const Sidebar = () => {
                   />
                   <span className='ms-3'>{name}</span>
                 </a>
-              ))}
-            </li>
+              </li>
+            ))}
           </ul>
           <ul className='pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700'>
-            <li>
-              {otherRoutes.map(({ name, href, id, icon }) => (
+            {otherRoutes.map(({ name, href, id, icon }) => (
+              <li key={id}>
                 <a
                   href={href}
-                  id={id}
                   className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
                 >
                   <SvgIcon
@@ -101,8 +100,8 @@ const Sidebar = () => {
                   />
                   <span className='ms-3'>{name}</span>
                 </a>
-              ))}
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </aside>
